@@ -178,21 +178,21 @@ Each of them is useful from the first session of the application administration 
 
 - [x] #739 Lang: This parameter allows IT developers define the language on which the NGold library goes return the response if the request is successful or unsuccessful. For this first version, this parameter uses two values. The en for the English-speaking countries and the fr for the countries francophone;
 
-- [x] #739 NameOfBank: It is with this parameter that the establishment financier will define the name regarding his business;
+- #739 NameOfBank: It is with this parameter that the establishment financier will define the name regarding his business;
 
-- [x] #739 NameOfEstablis: Once the name of your company, you will be expected to also define the name of the computer on which the transactions will be executed. For example, you have a bank and with this bank you have 5 establishments that will manage the transactions. So each of these computers should have a unique name to ensure the security of encrypted currency;
+- [x] NameOfEstablis: Once the name of your company, you will be expected to also define the name of the computer on which the transactions will be executed. For example, you have a bank and with this bank you have 5 establishments that will manage the transactions. So each of these computers should have a unique name to ensure the security of encrypted currency;
 
-- [x] #739 City: The exact city of your establishment;
+- [x] City: The exact city of your establishment;
 
-- [x] #739 Municipality: The municipality of your establishment;
+- [x] Municipality: The municipality of your establishment;
 
-- [x] #739 Neighborhood: The neighborhood where you are based;
+- [x] Neighborhood: The neighborhood where you are based;
 
-- [x] #739 Street: The street of the establishment;
+- [x] Street: The street of the establishment;
 
-- [x] #739 RueNum: The parcel number;
+- [x]  RueNum: The parcel number;
 
-- [x] #739 Ref: And a little reference so that your customers get to find you easily thanks to this information that the NGold library will encrypt to initialize your computer and secure it against hackers who would like
+- [x] Ref: And a little reference so that your customers get to find you easily thanks to this information that the NGold library will encrypt to initialize your computer and secure it against hackers who would like
 spy on you for invalid currency or send an unwanted person for withdrawal.
 
 To do this, let's add the session initialization function to our file TestAdmin.cpp as follows:
