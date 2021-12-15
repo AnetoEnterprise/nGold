@@ -107,4 +107,32 @@ If you have come to this point, know that you are already in the right sense. An
 An IDE is the integrated development environment designed to allow IT developers to code their applications easily with syntax colors so that the syntaxes are readable during programming. You can choose any text editor like Windows Notepad, Notepad ++, DevC ++ or others. In this manual, on Windows we will use the IDE DevC ++ and under Ubuntu, Notepad ++.
 
 # b. The Header
-The header, as the name suggests, is the header of our library of monetary ciphers. It's in this file header that will contain all the functions concerning our NGold library in order to adapt them to your application. To proceed, go to your project directory and create a ngold.h file which will be our Header and add the codes below after :
+The header, as the name suggests, is the header of our library of monetary ciphers. It's in this file header that will contain all the functions concerning our NGold library in order to adapt them to your application. To proceed, go to your project directory and create a ngold.h file which will be our Header and add the codes below after :<br />
+#ifndef NGOLD_H<br />
+#define NGOLD_H<br /><br />
+#include <iostream><br />
+#include <string.h><br /><br />
+using namespace std;<br /><br />
+string NGOLD_INITIAL_SESSION(string Lang, string NameOfBank, string NameOfEstablis, string Country, string Ville, string Commune, string Quartier, string Rue, string RueNum, string Ref);<br />
+string NGOLD_CONVERT_ALL_SESSIONS(string Lang, string NameOfBank);<br />
+string NGOLD_ASK_FOR_KEY(string Lang, string NameOfBank, string NameOfEstablis, string mySessionsNumber);<br />
+string NGOLD_VALIDATE_KEY(string Lang, string myKey);<br />
+string NGOLD_LIST_ESTABLISHMENTS(string Lang);<br />
+string NGOLD_VERIFY_SESSIONS(string Lang, string NameOfEstablis);<br />
+string NGOLD_GENERATE_MONEY(string Lang, string NameOfEstablis, string Amount);<br />
+string NGOLD_GENERATE_MONEY_WITH_PASS(string Lang, string NameOfEstablis, string Amount, string Pass);<br />
+string NGOLD_VERIFY_MONEY(string Lang, string Money);<br />
+string NGOLD_USING_MONEY(string Lang, string Money, string VC);<br /><br />
+#endif<br />
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/DevCPP.png)
+
+We have just defined our Header, now we will move on to the
+creating a sample application for our project. Let's create another file
+and give them the name of TestAdmin.cpp like in the picture:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeHeaderf.png)
+
+# Example 1:
+First before we start to code our new application of
+encrypted monetary transactions, we will use our Header file
+ngold.h in the header of our TestAdmin.cpp file as follows:
+
