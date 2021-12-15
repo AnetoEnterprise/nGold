@@ -70,3 +70,5 @@ We are now going to prepare our environment of development in order to install a
 
 # Windows:
 Under windows XP / 7/8/10 you have two choices to prepare your development environment. You have the choice to install MinGW or MSYS. With MinGW, once installed, you have the choice to check all the components or choose those of your choice in order to prepare your environment correctly as in the picture below:
+
+![alt text](https://github.com/AnetoEnterprise/nGold/MinGW.png)
