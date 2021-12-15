@@ -72,3 +72,19 @@ We are now going to prepare our environment of development in order to install a
 Under windows XP / 7/8/10 you have two choices to prepare your development environment. You have the choice to install MinGW ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeMinGW.png) or MSYS ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeMSYS.png). With MinGW, once installed, you have the choice to check all the components or choose those of your choice in order to prepare your environment correctly as in the picture below:
 
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/MingGW.png)
+
+In our case, we were able to check the GCC compiler and G++:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SuiteMingGW.png)
+
+Using MSYS as the development environment, you need to install the GCC and G ++ online compiler from order as follows:
+# pacman -S mingw-w64-x86_64-toolchain base-devel
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/MSYS.png)
+
+# Linux:
+With linux distributions such as Ubuntu and Debian, you can install the GCC and G ++ compiler by using the following command from your terminal:
+sudo apt-get install gcc g ++ -y
+For the CentOS linux platform:
+sudo yum install gcc g ++ -y
+
+# 2. Installation of the NGold library
+It is high time that never install our famous NGold library in order to integrate it into the application as as a static library of currencies digital. The installation procedures are somewhat similar imports the operating system (Platform) that you use.
