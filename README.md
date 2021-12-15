@@ -102,3 +102,9 @@ We have just prepared our environment for fully developed and installed the libr
 
 # III.  Part 2: Development and Publication
 If you have come to this point, know that you are already in the right sense. And you should know that the integration of the NGold library does not No C ++ programming language experience required. For go further with the C ++ programming language, you must find tutorials on the internet that are based on its programming. In this manual, we will only proceed with programming the integration of the NGold library.
+
+# a. IDE (Integrated Development Environment)
+An IDE is the integrated development environment designed to allow IT developers to code their applications easily with syntax colors so that the syntaxes are readable during programming. You can choose any text editor like Windows Notepad, Notepad ++, DevC ++ or others. In this manual, on Windows we will use the IDE DevC ++ and under Ubuntu, Notepad ++.
+
+# b. The Header
+The header, as the name suggests, is the header of our library of monetary ciphers. It's in this file header that will contain all the functions concerning our NGold library in order to adapt them to your application. To proceed, go to your project directory and create a ngold.h file which will be our Header and add the codes below after :
