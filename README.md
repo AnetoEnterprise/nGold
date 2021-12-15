@@ -90,6 +90,7 @@ For the CentOS linux platform:
 It is high time that never install our famous NGold library in order to integrate it into the application as as a static library of currencies digital. The installation procedures are somewhat similar imports the operating system (Platform) that you use.
 
 First you need to download the NGold library if it is not already done and from your terminal type the command below in order to download it:<br />
+```diff
 + cd -<br />
 + wget`#c5f015` https://sourceforge.net/projects/ngold/files/ngold-1.0.tar.xz/download<br />
 Once the package has downloaded to your hard drive, run the following commands to install the NGold library to ensure its development:<br />
