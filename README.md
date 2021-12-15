@@ -69,6 +69,6 @@ Integration of the NGold library into your application service, required the ins
 We are now going to prepare our environment of development in order to install a G ++ compiler to facilitate the integration of the NGold library into your application for management of encrypted digital currencies. Unfortunately we were able to prepare the examples for two platforms.
 
 # Windows:
-Under windows XP / 7/8/10 you have two choices to prepare your development environment. You have the choice to install MinGW or MSYS. With MinGW, once installed, you have the choice to check all the components or choose those of your choice in order to prepare your environment correctly as in the picture below:
+Under windows XP / 7/8/10 you have two choices to prepare your development environment. You have the choice to install MinGW ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeMinGW.png) or MSYS ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeMSYS.png). With MinGW, once installed, you have the choice to check all the components or choose those of your choice in order to prepare your environment correctly as in the picture below:
 
-![alt text](https://github.com/AnetoEnterprise/nGold/MinGW.png)
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/MingGW.png)
