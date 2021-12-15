@@ -91,7 +91,7 @@ It is high time that never install our famous NGold library in order to integrat
 
 First you need to download the NGold library if it is not already done and from your terminal type the command below in order to download it:<br />
 cd -<br />
-wget`#c5f015` https://sourceforge.net/projects/ngold/files/ngold-1.0.tar.xz/download<br />
+wget https://sourceforge.net/projects/ngold/files/ngold-1.0.tar.xz/download<br />
 Once the package has downloaded to your hard drive, run the following commands to install the NGold library to ensure its development:<br />
 tar -xvf ngold-1.0.tar.xz<br />
 cd ngold-1.0<br />
@@ -99,3 +99,6 @@ cd ngold-1.0<br />
 
 # 3. Conclusion
 We have just prepared our environment for fully developed and installed the library NGold. In the second part, we will see how proceed to call our encryption library.
+
+# III.  Part 2: Development and Publication
+If you have come to this point, know that you are already in the right sense. And you should know that the integration of the NGold library does not No C ++ programming language experience required. For go further with the C ++ programming language, you must find tutorials on the internet that are based on its programming. In this manual, we will only proceed with programming the integration of the NGold library.
