@@ -215,8 +215,29 @@ Now let's test together to see the result of our function initialization. Before
 
 # c. Compilation
 To make a call to the NGold library that we have installed otherwise to our G ++ compiler, we have to run the following command from a MinGW or MSYS terminal:
-```bash
+```shell
 cd E:/votredossier/exemple
 g++ TestAdmin.cpp -o TestAdmin -lngold
 ./TestAdmin.exe
 ```
+We see that the –lngold is part of our NGold library call before compiling an executable file.
+
+And here's the result :
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/Test1.png)
+
+This generated key is free with 1000 sessions for you to test
+correctly your application for testing currencies SandBox version.
+For the Production and Commercial version, we will see at the end of this manual how to proceed to get the key to a real digital currency encrypted. And you can see from the location of your executable file that you have just compiled and executed, a file with the extension .ng with the name of your establishment (Computer):
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/File1.png) In our example we were able to define as the computer name that we use at EstablishmentA. This is why this file also has this initialization name including extension ng.
+
+If your computer is not compatible for using the library NGold, you will get the failure response as follows:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/MSYSERREUR.png)
+
+This lsblk: command not found error message sets the library NGold cannot find your hard drive with this command. So you will be supposed to install it so that the encryption system works correctly from your computer on which will perform all of its functions.
+
+We now want to convert our generated free sessions key to that it be shared with our partner banks. For example, you worked in collaboration with another bank or money transfer agency and that you want your different customers to transfer the money without changing bank or agency, you will be supposed to integrate the function NGOLD_CONVERT_ALL_SESSIONS. This function will allow NGold to convert all your establishments using the .ng extension to a file with the ngp extension.
+
+As we specified above, if you have 5 or more establishments, at each will initialize their computer and this function will be executed using a specific computer. In this case you will be supposed to recover all the files with the .ng extension in each initialized computer in order to convert them easily to an encrypted partnership file.
+
+# Example 2:
+Let's create another app, you can choose any name and add the following syntaxes:
