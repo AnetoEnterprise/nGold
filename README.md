@@ -176,9 +176,9 @@ This NGOLD_INITIAL_SESSION function uses 10 parameters in order to initialize th
 Why all these parameters?<br />
 Each of them is useful from the first session of the application administration files on your computer.
 
-- [x] #739 Lang: This parameter allows IT developers define the language on which the NGold library goes return the response if the request is successful or unsuccessful. For this first version, this parameter uses two values. The en for the English-speaking countries and the fr for the countries francophone;
+- [x] Lang: This parameter allows IT developers define the language on which the NGold library goes return the response if the request is successful or unsuccessful. For this first version, this parameter uses two values. The en for the English-speaking countries and the fr for the countries francophone;
 
-- #739 NameOfBank: It is with this parameter that the establishment financier will define the name regarding his business;
+- [x] NameOfBank: It is with this parameter that the establishment financier will define the name regarding his business;
 
 - [x] NameOfEstablis: Once the name of your company, you will be expected to also define the name of the computer on which the transactions will be executed. For example, you have a bank and with this bank you have 5 establishments that will manage the transactions. So each of these computers should have a unique name to ensure the security of encrypted currency;
 
@@ -211,3 +211,12 @@ return EXIT_SUCCESS;
 }
 ```
   
+Now let's test together to see the result of our function initialization. Before we can test our trial application, we must first compile both of our files ngold.h and TestAdmin.cpp so that they become an executable application according to the platform we use for the development.
+
+# c. Compilation
+To make a call to the NGold library that we have installed otherwise to our G ++ compiler, we have to run the following command from a MinGW or MSYS terminal:
+```bash
+cd E:/votredossier/exemple
+g++ TestAdmin.cpp -o TestAdmin -lngold
+./TestAdmin.exe
+```
