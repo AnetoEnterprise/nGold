@@ -84,18 +84,25 @@ Using MSYS as the development environment, you need to install the GCC and G ++ 
 With linux distributions such as Ubuntu and Debian, you can install the GCC and G ++ compiler by using the following command from your terminal:<br />
 # sudo apt-get install gcc g ++ -y
 For the CentOS linux platform:
-# sudo yum install gcc g ++ -y
+```shell
+sudo yum install gcc g ++ -y
+```
 
 # 2. Installation of the NGold library
 It is high time that never install our famous NGold library in order to integrate it into the application as as a static library of currencies digital. The installation procedures are somewhat similar imports the operating system (Platform) that you use.
 
 First you need to download the NGold library if it is not already done and from your terminal type the command below in order to download it:<br />
-cd -<br />
-wget https://sourceforge.net/projects/ngold/files/ngold-1.0.tar.xz/download<br />
+```shell
+cd -
+wget https://sourceforge.net/projects/ngold/files/ngold-1.0.tar.xz/download
+```
+
 Once the package has downloaded to your hard drive, run the following commands to install the NGold library to ensure its development:<br />
-tar -xvf ngold-1.0.tar.xz<br />
-cd ngold-1.0<br />
-./install.sh<br />
+```shell
+tar -xvf ngold-1.0.tar.xz
+cd ngold-1.0
+./install.sh
+```
 
 # 3. Conclusion
 We have just prepared our environment for fully developed and installed the library NGold. In the second part, we will see how proceed to call our encryption library.
@@ -109,21 +116,25 @@ An IDE is the integrated development environment designed to allow IT developers
 # b. The Header
 The header, as the name suggests, is the header of our library of monetary ciphers. It's in this file header that will contain all the functions concerning our NGold library in order to adapt them to your application. To proceed, go to your project directory and create a ngold.h file which will be our Header and add the codes below after :<br />
 ```cpp
-#ifndef NGOLD_H<br />
-#define NGOLD_H<br /><br />
-#include <iostream><br />
-#include <string.h><br /><br />
-using namespace std;<br /><br />
-string NGOLD_INITIAL_SESSION(string Lang, string NameOfBank, string NameOfEstablis, string Country, string Ville, string Commune, string Quartier, string Rue, string RueNum, string Ref);<br />
-string NGOLD_CONVERT_ALL_SESSIONS(string Lang, string NameOfBank);<br />
-string NGOLD_ASK_FOR_KEY(string Lang, string NameOfBank, string NameOfEstablis, string mySessionsNumber);<br />
-string NGOLD_VALIDATE_KEY(string Lang, string myKey);<br />
-string NGOLD_LIST_ESTABLISHMENTS(string Lang);<br />
-string NGOLD_VERIFY_SESSIONS(string Lang, string NameOfEstablis);<br />
-string NGOLD_GENERATE_MONEY(string Lang, string NameOfEstablis, string Amount);<br />
-string NGOLD_GENERATE_MONEY_WITH_PASS(string Lang, string NameOfEstablis, string Amount, string Pass);<br />
-string NGOLD_VERIFY_MONEY(string Lang, string Money);<br />
-string NGOLD_USING_MONEY(string Lang, string Money, string VC);<br /><br />
+#ifndef NGOLD_H
+#define NGOLD_H
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+string NGOLD_INITIAL_SESSION(string Lang, string NameOfBank, string NameOfEstablis, string Country, string Ville, string Commune, string Quartier, string Rue, string RueNum, string Ref);
+string NGOLD_CONVERT_ALL_SESSIONS(string Lang, string NameOfBank);
+string NGOLD_ASK_FOR_KEY(string Lang, string NameOfBank, string NameOfEstablis, string mySessionsNumber);
+string NGOLD_VALIDATE_KEY(string Lang, string myKey);
+string NGOLD_LIST_ESTABLISHMENTS(string Lang);
+string NGOLD_VERIFY_SESSIONS(string Lang, string NameOfEstablis);
+string NGOLD_GENERATE_MONEY(string Lang, string NameOfEstablis, string Amount);
+string NGOLD_GENERATE_MONEY_WITH_PASS(string Lang, string NameOfEstablis, string Amount, string Pass);
+string NGOLD_VERIFY_MONEY(string Lang, string Money);
+string NGOLD_USING_MONEY(string Lang, string Money, string VC);
+
 #endif
 ```
 <br />
@@ -139,12 +150,15 @@ First before we start to code our new application of
 encrypted monetary transactions, we will use our Header file
 ngold.h in the header of our TestAdmin.cpp file as follows:<br />
 ```cpp
-#include "ngold.h"<br />
-#include <iostream><br />
-#include <string><br /><br />
-using namespace std;<br /><br />
-int main(int argc, char** argv) {<br /><br />
-return EXIT_SUCCESS;<br />
+#include "ngold.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+
+return EXIT_SUCCESS;
 }
 ```
 <br />
