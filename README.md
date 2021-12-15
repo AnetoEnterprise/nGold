@@ -129,10 +129,26 @@ string NGOLD_USING_MONEY(string Lang, string Money, string VC);<br /><br />
 We have just defined our Header, now we will move on to the
 creating a sample application for our project. Let's create another file
 and give them the name of TestAdmin.cpp like in the picture:
-![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeHeaderf.png)
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeHeaderF.png)
 
 # Example 1:
 First before we start to code our new application of
 encrypted monetary transactions, we will use our Header file
-ngold.h in the header of our TestAdmin.cpp file as follows:
+ngold.h in the header of our TestAdmin.cpp file as follows:<br />
+#include "ngold.h"<br />
+#include <iostream><br />
+#include <string><br /><br />
+using namespace std;<br /><br />
+int main(int argc, char** argv) {<br /><br />
+return EXIT_SUCCESS;<br />
+}<br />
 
+NB: The integration of the NGold library depends on what you want To do. You do not have to use all the functions defined in the file Header. It depends on your idea and the service you want to offer to your clients.
+
+But the only thing to know, if you want to design an app regarding your financial institution, you must first call the function to initialize the session to your application using the NGOLD_INITIAL_SESSION command.
+
+This command is used to initialize the session of the computer on which will perform the tasks of monetary transactions. A computer that is not initialized with this function will not be able to process the information regarding transactions encrypted by the NGold library.
+
+This NGOLD_INITIAL_SESSION function uses 10 parameters in order to initialize the computer regarding transactions.<br />
+Why all these parameters?<br />
+Each of them is useful from the first session of the application administration files on your computer.
