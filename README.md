@@ -74,7 +74,7 @@ Under windows XP / 7/8/10 you have two choices to prepare your development envir
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/MingGW.png)
 
 In our case, we were able to check the GCC compiler and G++:
-![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SuiteMingGW.png)
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SuiteMinGW.png)
 
 Using MSYS as the development environment, you need to install the GCC and G ++ online compiler from order as follows:
 # pacman -S mingw-w64-x86_64-toolchain base-devel
@@ -82,9 +82,20 @@ Using MSYS as the development environment, you need to install the GCC and G ++ 
 
 # Linux:
 With linux distributions such as Ubuntu and Debian, you can install the GCC and G ++ compiler by using the following command from your terminal:
-sudo apt-get install gcc g ++ -y
+# sudo apt-get install gcc g ++ -y
 For the CentOS linux platform:
-sudo yum install gcc g ++ -y
+# sudo yum install gcc g ++ -y
 
 # 2. Installation of the NGold library
 It is high time that never install our famous NGold library in order to integrate it into the application as as a static library of currencies digital. The installation procedures are somewhat similar imports the operating system (Platform) that you use.
+
+First you need to download the NGold library if it is not already done and from your terminal type the command below in order to download it:
+cd -
+wget https://www.sourceforge.net/p/ngold/ngold-1.0.tar.xz
+Once the package has downloaded to your hard drive, run the following commands to install the NGold library to ensure its development:
+tar -xvf ngold-1.0.tar.xz
+cd ngold-1.0 /
+./install.sh
+
+# 3. Conclusion
+We have just prepared our environment for fully developed and installed the library NGold. In the second part, we will see how proceed to call our encryption library.
