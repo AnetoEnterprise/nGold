@@ -108,6 +108,7 @@ An IDE is the integrated development environment designed to allow IT developers
 
 # b. The Header
 The header, as the name suggests, is the header of our library of monetary ciphers. It's in this file header that will contain all the functions concerning our NGold library in order to adapt them to your application. To proceed, go to your project directory and create a ngold.h file which will be our Header and add the codes below after :<br />
+```cpp
 #ifndef NGOLD_H<br />
 #define NGOLD_H<br /><br />
 #include <iostream><br />
@@ -123,25 +124,30 @@ string NGOLD_GENERATE_MONEY(string Lang, string NameOfEstablis, string Amount);<
 string NGOLD_GENERATE_MONEY_WITH_PASS(string Lang, string NameOfEstablis, string Amount, string Pass);<br />
 string NGOLD_VERIFY_MONEY(string Lang, string Money);<br />
 string NGOLD_USING_MONEY(string Lang, string Money, string VC);<br /><br />
-#endif<br />
+#endif
+```
+<br />
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/DevCPP.png)
 
 We have just defined our Header, now we will move on to the
 creating a sample application for our project. Let's create another file
 and give them the name of TestAdmin.cpp like in the picture:
-![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeHeaderF.png)
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/IconeHeauderF.png)
 
 # Example 1:
 First before we start to code our new application of
 encrypted monetary transactions, we will use our Header file
 ngold.h in the header of our TestAdmin.cpp file as follows:<br />
+```cpp
 #include "ngold.h"<br />
 #include <iostream><br />
 #include <string><br /><br />
 using namespace std;<br /><br />
 int main(int argc, char** argv) {<br /><br />
 return EXIT_SUCCESS;<br />
-}<br />
+}
+```
+<br />
 
 NB: The integration of the NGold library depends on what you want To do. You do not have to use all the functions defined in the file Header. It depends on your idea and the service you want to offer to your clients.
 
