@@ -82,7 +82,10 @@ Using MSYS as the development environment, you need to install the GCC and G ++ 
 
 # Linux:
 With linux distributions such as Ubuntu and Debian, you can install the GCC and G ++ compiler by using the following command from your terminal:<br />
-# sudo apt-get install gcc g ++ -y
+```shell
+sudo apt-get install gcc g ++ -y
+```
+
 For the CentOS linux platform:
 ```shell
 sudo yum install gcc g ++ -y
@@ -137,7 +140,7 @@ string NGOLD_USING_MONEY(string Lang, string Money, string VC);
 
 #endif
 ```
-<br />
+
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/DevCPP.png)
 
 We have just defined our Header, now we will move on to the
@@ -172,3 +175,39 @@ This command is used to initialize the session of the computer on which will per
 This NGOLD_INITIAL_SESSION function uses 10 parameters in order to initialize the computer regarding transactions.<br />
 Why all these parameters?<br />
 Each of them is useful from the first session of the application administration files on your computer.
+
++ Lang: This parameter allows IT developers define the language on which the NGold library goes return the response if the request is successful or unsuccessful. For this first version, this parameter uses two values. The en for the English-speaking countries and the fr for the countries francophone;
+
++ NameOfBank: It is with this parameter that the establishment financier will define the name regarding his business;
+
++ NameOfEstablis: Once the name of your company, you will be expected to also define the name of the computer on which the transactions will be executed. For example, you have a bank and with this bank you have 5 establishments that will manage the transactions. So each of these computers should have a unique name to ensure the security of encrypted currency;
+
++ City: The exact city of your establishment;
+
++ Municipality: The municipality of your establishment;
+
++ Neighborhood: The neighborhood where you are based;
+
++ Street: The street of the establishment;
+
++ RueNum: The parcel number;
+
++ Ref: And a little reference so that your customers get to find you easily thanks to this information that the NGold library will encrypt to initialize your computer and secure it against hackers who would like
+spy on you for invalid currency or send an unwanted person for withdrawal.
+
+To do this, let's add the session initialization function to our file TestAdmin.cpp as follows:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+using namespace std;
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_INITIAL_SESSION("en", "MyBankA", "EstablishmentA", "DRC",
+"Kinshasa", "Ngaliema", "Ngoma Kinkusa", "Route de matadi", "200", "En
+diagonale avec Peloustore");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+  
