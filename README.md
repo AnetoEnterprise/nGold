@@ -241,3 +241,32 @@ As we specified above, if you have 5 or more establishments, at each will initia
 
 # Example 2:
 Let's create another app, you can choose any name and add the following syntaxes:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_CONVERT_ALL_SESSIONS("en", "MyBankA");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+
+The MyBankA parameter represents the name of our test bank. So at the end of conversion of all initialization files, the partnership file will be called MyBankA.ngp so that it can be shared on all computers from your bank and those of your partners.
+
+NB: All files with the .ng extension must be found on the same location of your converting executable application.
+
+Now you can compile and test your new application by placing all files with the .ng extension in the same directory, you will see a new file created with the name of your bank or transfer with encrypted partnership .ngp extension.
+# Under Windows:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SousWindows1.png)
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SousWindows2.png)
+
+# Under Linux:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SousLinux1.png)
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SousLinux2.png)
+
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/File2.png) You are free to share this file via all the computers in your establishment and your partners also on their part, will share the file in the computers they use for the management of NGold digital currency by completely safe.
