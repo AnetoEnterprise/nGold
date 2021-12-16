@@ -270,3 +270,42 @@ Now you can compile and test your new application by placing all files with the 
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SousLinux2.png)
 
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/File2.png) You are free to share this file via all the computers in your establishment and your partners also on their part, will share the file in the computers they use for the management of NGold digital currency by completely safe.
+
+# Example 3
+Now it's time to create a client application allowing our clients to transfer money easily across all platforms of communications or in all remote wireless networks. With this part, you have the choice to choose if your application will be accessible to users connected remote or unconnected remote users.
+
+Noted that, the users not logged in are banks or agencies partners that you worked with them. While users do not connected will be your customers who want to transfer money to their families, comrades or others without moving or using a Credit Card but just with their mobile phones or computers.
+
+Before proceeding, you should know that the generation of the currency encrypted numeric required both functions NGOLD_LIST_ESTABLISHMENTS and NGOLD_GENERATE_MONEY.
+
+- [x] NGOLD_LIST_ESTABLISHMENTS: This function uses a single parameter for the language of the response to a request. It allows to list the establishments from a .ngp partnership file in order to retrieve all the information regarding the exact locations of each establishment so that users can choose well the establishment where the beneficiary will travel for recovery of his money.
+
+NB: It is a secret between the sender and the recipient of the change digital generated.
+- [x] NGOLD_GENERATE_MONEY: This one uses 3 or 4 parameters:
+a) Lang: As usual the language of the results response;
+
+b) NameOfEstablis: The name of the institution generating the currency (In our example EstablishmentA);
+
+c) Amount: The amount to be transferred to the beneficiary;
+
+d) Pass: And the password to allow the beneficiary of the change to define it before its withdrawal. This parameter is not mandatory but this is just for the security of monetary information. If you don't not set, the NGold library will automatically generate a validation code for you.
+
+Let's move on to the application, create another file with the name of TestClient.cpp and add the following syntaxes:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+  
+using namespace std;
+  
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_LIST_ESTABLISHMENTS("en");
+cout << resultat << endl;
+resultat=NGOLD_GENERATE_MONEY("en", "EstablishmentA", "0.5$");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+Compile and run the application you will see your digital currency correctly encrypted as shown in the image below:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/NGOGENERATION.png)
