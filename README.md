@@ -366,4 +366,77 @@ cout << resultat << endl;
 return EXIT_SUCCESS;
 }
 ```
-  
+
+In order to compile and test, we have the following result containing the name of the bank or transfer agency, the value of the currency and its validation:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/VerifyMoney.png)
+NB: If the verified currency is the test currency, your Status will be SandBox. In addition, your Status will be as shown in the image for the Production (Real money).
+
+# Example 6
+Now let's move on to withdrawing the change. Once the beneficiary has all information relating to the recovery of his money, he will be free to go to the bank or money transfer agency intended for that currency digital to easily recover your money.
+
+The compatible function for making a withdrawal is NGOLD_USING_MONEY using 3 parameters Lang, Money and VC:
++ Lang: Define the language of the response concerning the request;
+
++ Money: Represents the currency to use;
+
++ VC: And the validation code of the currency on which it was generated.
+
+Let's add the following syntaxes to the TestAdmin.cpp file, compile and test:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_USING_MONEY("en", "-015--06---1402--1500-", "47135");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+As a result we have:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/ValidationMonnaie.png)
+Which means our withdrawal was done correctly.
+
+We have come to the end of our testing exercises, now we can request permission from the NGold library to switch to mode Production to present the final product to our consumers. Both functions we have left are the NGOLD_ASK_FOR_KEY and NGOLD_VALIDATE_KEY.
+
+- [x] NGOLD_ASK_FOR_KEY: This function requires 4 following parameters and
+requests the Production version key:
+
++ Lang: Define the language of the response;
+
++ NameOfBank: The name of the bank or transfer agency;
+
++ NameOfEstablis: The name of the institution initiating the request for the production key;
+
++ mySessionsNumber: And the number of sessions requested.
+
+- [x] NGOLD_VALIDATE_KEY: For the validation of the key in your computer once activated from AnetoEnterprise support, this required function 2 parameters Lang and myKey.
++ Lang: Once again the language of the response obtained;
+
++ myKey: And the key retrieved from the company support distributor of the NGold library.
+
+Let's end it!
+In the same TestAdmin.cpp file, add the following syntaxes in order to launch the request and activate your sessions:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_ASK_FOR_KEY("en", "MyBankA", "EstablishmentA", "3000");
+cout << resultat << endl;
+resultat=NGOLD_VALIDATE_KEY("en", "-015--06---1402--1500-", "47135");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+Let's compile and test the final application.
+
+# d. Conclusion
+We have just seen how the NGold library performs its processing and returning the results in XML format for you allow it to be well adapted to other programming languages compatible with reading information in XML format. We hope that after reading this you will be able to innovate your financial institution to facilitate future transactions at the adaptation of your graphical interface of the application of services via the NGold library.
