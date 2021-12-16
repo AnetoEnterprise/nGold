@@ -309,3 +309,61 @@ return EXIT_SUCCESS;
 ```
 Compile and run the application you will see your digital currency correctly encrypted as shown in the image below:
 ![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/NGOGENERATION.png)
+
+We can clearly see from the image, the application had first listed the establishments so that the user can choose the location where the beneficiary will get their money back. Subsequently, the generation of currency carried out with the following information:
+
++ VC: The VC is the validation code (In English Validating Code) that the beneficiary will use to recover his money in order to assert that he is the owner of the currency;
+
++ NGOLD: This parameter represents the encrypted digital currency that the sender will copy in order to send it to the beneficiary as currency valid;
+
++ RS: As the name suggests Rest Sessions, displays the outcome of the remaining sessions for the next generations of currencies so you know if you have how many valid sessions left that the NGold library is chargeable for each session of the generation of encrypted digital currency;
+
++ BANK: Displays the bank or agency receiving the money;
+
++ ESTABLISHMENT: The institution receiving the currency;
+
++ DETAILS: And details concerning the establishment on which the beneficiary will travel for the recovery of his money.
+
+We have just seen how our library displays the number of sessions remaining after generation of the encrypted currency. So we go see how to check the remaining sessions without generating change. The function that gives us this possibility is the NGOLD_VERIFY_SESSIONS. This function uses two parameters Lang and NameOfEstablis in order to view the remaining sessions of your computer regarding the generation of the NGold's encrypted digital currency.
+
+# Example 4
+In your existing application or existing TestAdmin.cpp file, add the syntaxes below:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_VERIFY_SESSIONS("en", "EstablishmentA");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+Compile and run the application you will see the remains of your sessions as represented here:
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/SessionsNumber.png)
+
+It is now high time that never for the bank or the agency partner collects and verifies the valid change before a withdrawal of his beneficiary. The function to check the valid currency is nice and well NGOLD_VERIFY_MONEY. It is force-fed with the two parameters Lang and Money:
+
++ Lang: The language of the response for the verification request;
++ Money: And the recipient's encrypted digital currency.
+
+# Example 5
+We still continue with our TestAdmin.cpp file, add the following syntaxes below for checking the valid or invalid currency of your customers:
+```cpp
+#include "ngold.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+string resultat="";
+resultat=NGOLD_VERIFY_MONEY ("en", "-015--06---1402--1500-");
+cout << resultat << endl;
+return EXIT_SUCCESS;
+}
+```
+  
