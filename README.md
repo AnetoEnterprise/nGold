@@ -451,4 +451,4 @@ We have just seen how the NGold library performs its processing and returning th
 
 :+1: And to AnetoEnterprise Inc. For the financing of this project.
 
-![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/Logo.png) Copyright 2021 by AnetoEnterprise Inc. all rights reserved.
+![](https://github.com/AnetoEnterprise/nGold/blob/main/Logo.png | width=40) Copyright 2021 by AnetoEnterprise Inc. all rights reserved.
