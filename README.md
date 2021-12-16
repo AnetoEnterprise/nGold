@@ -440,3 +440,15 @@ Let's compile and test the final application.
 
 # d. Conclusion
 We have just seen how the NGold library performs its processing and returning the results in XML format for you allow it to be well adapted to other programming languages compatible with reading information in XML format. We hope that after reading this you will be able to innovate your financial institution to facilitate future transactions at the adaptation of your graphical interface of the application of services via the NGold library.
+
+# IV. I Thanks
+
+:+1: We first thank our God for having us kept in good health during all these years tests concerning this NGold library;
+
+:+1: Rodriguez Lufungula for his moral support and peace to his soul;
+
+:+1: Nagui Divangi for the reading and validation of this project;
+
+:+1: And to AnetoEnterprise Inc. For the financing of this project.
+
+![alt text](https://github.com/AnetoEnterprise/nGold/blob/main/Logo.png) Copyright 2021 by AnetoEnterprise Inc. all rights reserved.
